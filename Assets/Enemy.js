@@ -13,5 +13,7 @@ function Update () {
 
 function OnTriggerEnter (other : Collider) 
 {
-	Destroy(this.gameObject);
+	Health--;
+	if (Health<=0)
+		Destroy(this.gameObject);
 }
